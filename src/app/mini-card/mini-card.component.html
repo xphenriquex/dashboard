@@ -1,0 +1,28 @@
+<div class="card-body">
+  <div class="d-flex justify-content-between align-items-baseline">
+    <!-- <h6 class="card-title mb-0">New Customers</h6> -->
+  </div>
+  <div class="row">
+    <div class="col-6 col-md-12 col-xl-5">
+      <h3 class="mb-2 mt-2">{{ amount | currency }}</h3>
+      <div class="mb-2" *ngIf="percentage > 0">
+        <p class="text-success">
+          <span>+{{percentage}}%</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up icon-sm mb-1" appfeathericon=""><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+        </p>
+      </div>
+
+      <div class="mb-2" *ngIf="percentage < 0">
+        <p class="text-danger">
+          <span>-{{percentage}}%</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down icon-sm mb-1" _ngcontent-yot-c95="" appfeathericon=""><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+        </p>
+      </div>
+    </div>
+    <div class="col-6 col-md-12 col-xl-7">
+      <div class="mt-md-3 mt-xl-0">
+        <img src="{{img}}" width="100px" height="100px" />
+      </div>
+    </div>
+  </div>
+</div>
